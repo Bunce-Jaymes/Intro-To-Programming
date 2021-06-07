@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hand and Foot</title>
+  <script>
+  	function addAllTheNumbers(){
+  		var totalCleanBooks= document.getElementById("cleanBooks_input").value*1
+  		var totalDirtyBooks= document.getElementById("dirtyBooks_input").value*1
+  		var totalKingsToEights= document.getElementById("kingsToEights_input").value*1
+  		var totalSevensToFours= document.getElementById("sevensToFours_input").value*1
+  		var totalTwosAndAces= document.getElementById("twosAndAces_input").value*1
+  		var totalJokers= document.getElementById("jokers_input").value*1
+  		var totalRedThrees= document.getElementById("redThrees_input").value*1
+  		var totalOtherThings= document.getElementById("otherPoints_input").value*1
+
+
+  		var drew11= document.getElementById("drew11_input").checked;
+  		var outFirst= document.getElementById("outFirst_input").checked;
+
+  		if(drew11 == true){
+  			var drew11points= 100
+  		}
+  		else{
+  			var drew11points= 0
+  		}
+
+  		if(outFirst == true){
+  			var outFirstpoints= 200
+  		}
+  		else{
+  			var outFirstpoints= 0
+  		}
+
+  		if (totalCleanBooks == NaN){
+  			var totalClean
+  		}
+
+
+  		var totalCleanPoints= totalCleanBooks * 500;
+  		var totalDirtyPoints= totalDirtyBooks * 300;
+  		var totalKingsToEightsPoints= totalKingsToEights * 10;
+  		var totalSevensToFoursPoints= totalSevensToFours * 5;
+  		var totalTwosAndAcesPoints= totalTwosAndAces * 20;
+  		var totalJokersPoints= totalJokers * 50;
+  		var totalRedThreesPoints= totalRedThrees * -300;
+
+  		var allThePoints= totalCleanPoints + totalDirtyPoints + totalKingsToEightsPoints + totalSevensToFoursPoints + totalTwosAndAcesPoints + totalJokersPoints + totalRedThreesPoints + drew11points + outFirstpoints + totalOtherThings;
+
+  		document.getElementById("result_display").innerHTML= "Total Number of points: "+allThePoints;
+
+		document.getElementById("cleanBooks_input").value= null
+	  	document.getElementById("dirtyBooks_input").value= null
+	  	document.getElementById("kingsToEights_input").value= null
+	  	document.getElementById("sevensToFours_input").value= null
+	  	document.getElementById("twosAndAces_input").value= null
+	  	document.getElementById("jokers_input").value= null
+	  	document.getElementById("redThrees_input").value= null
+	  	document.getElementById("otherPoints_input").value= null
+
+	  	document.getElementById("drew11_input").checked = false;
+	  	document.getElementById("outFirst_input").checked = false
+	}
+  </script>
+
+  <style>
+  body{
+  		background-color: #7885FF;
+  	}
+   	#cleanBooks_input{
+  		text-align: center;
+  		border: none;
+  		border-radius: 5px;
+  		box-shadow: 0px 0px 5px #666666 Inset;
+  		height: 25px;
+  		width: 200px;
+  		text-indent: 5px;
+  	}
+  	#dirtyBooks_input{
+  		text-align: center;
+  		border: none;
+  		border-radius: 5px;
+  		box-shadow: 0px 0px 5px #666666 Inset;
+  		height: 25px;
+  		width: 200px;
+  		text-indent: 5px;
+  	}
+  	#kingsToEights_input{
+  		text-align: center;
+  		border: none;
+  		border-radius: 5px;
+  		box-shadow: 0px 0px 5px #666666 Inset;
+  		height: 25px;
+  		width: 200px;
+  		text-indent: 5px;
+  	}
+  	#sevensToFours_input{
+  		text-align: center;
+  		border: none;
+  		border-radius: 5px;
+  		box-shadow: 0px 0px 5px #666666 Inset;
+  		height: 25px;
+  		width: 200px;
+  		text-indent: 5px;
+  	}
+  	#twosAndAces_input{
+  		text-align: center;
+  		border: none;
+  		border-radius: 5px;
+  		box-shadow: 0px 0px 5px #666666 Inset;
+  		height: 25px;
+  		width: 200px;
+  		text-indent: 5px;
+  	}
+  	#jokers_input{
+  		text-align: center;
+  		border: none;
+  		border-radius: 5px;
+  		box-shadow: 0px 0px 5px #666666 Inset;
+  		height: 25px;
+  		width: 200px;
+  		text-indent: 5px;
+  	}
+  	#redThrees_input{
+  		text-align: center;
+  		border: none;
+  		border-radius: 5px;
+  		box-shadow: 0px 0px 5px #666666 Inset;
+  		height: 25px;
+  		width: 200px;
+  		text-indent: 5px;
+  	}
+  	#otherPoints_input{
+  		text-align: center;
+  		border: none;
+  		border-radius: 5px;
+  		box-shadow: 0px 0px 5px #666666 Inset;
+  		height: 25px;
+  		width: 200px;
+  		text-indent: 5px;
+  	}
+  	#drew11_input{
+  		-webkit-transform: scale(2);
+  	}
+  	#outFirst_input{
+  		-webkit-transform: scale(2);
+  	}
+  	#col {
+  		text-align: center;
+  		-moz-column-count: 3;
+  		-webkit-column-count: 3;
+  		column-count: 3;
+  		column-fill: auto;
+  		-webkit-column-fill: auto;
+  	}
+  	h1{
+  		text-align: center;
+  		font-size: 30pt;
+  		font-family: "Arial", Helvetica, sans-serif;
+  	}
+  	#result_display{
+  		font-size: 35pt;
+  		column-span: all;
+  		font-family: "Arial", Helvetica, sans-serif;
+  	}
+  	p{
+  		font-family: "Arial", Helvetica, sans-serif;
+  		font-size: 14pt;
+  	}
+  	#calculate {
+	  -webkit-border-radius: 8;
+	  -moz-border-radius: 8;
+	  border-radius: 8px;
+	  -webkit-box-shadow: 0px 1px 3px #666666;
+	  -moz-box-shadow: 0px 1px 3px #666666;
+	  box-shadow: 0px 1px 3px #666666;
+	  font-family: Arial;
+	  color: #000000;
+	  font-size: 20px;
+	  background: #5CFF00;
+	  padding: 10px 20px 10px 20px;
+	  text-decoration: none;
+	}
+	#calculate:hover {
+  	background: #8BFF59;
+  	text-decoration: none;
+	}
+ 
+  </style>
+</head>
+
+<body>
+
+	<h1>Hand And Foot Counter</h1>
+	<section id="col">
+		<p>Enter # of Clean Books: </p><input id="cleanBooks_input"></input>
+		<p>Enter # of Dirty Books: </p><input id="dirtyBooks_input"></input>
+		<p>Enter # of Kings to Eight's: </p><input id="kingsToEights_input"></input>
+		<p>Enter # of Seven's to Four's: </p><input id="sevensToFours_input"></input>
+		<p>Enter # of Two's and Ace's: </p><input id="twosAndAces_input"></input>
+		<p>Enter # of Jokers: </p><input id="jokers_input"></input>
+		<p>Enter # of Red Three's: </p><input id="redThrees_input"></input>
+		<p>Drew 11   <input id="drew11_input" type="checkbox"></p>
+		<p>Out First   <input id="outFirst_input" type="checkbox"></p>
+		<p>Other Points:</p><input id="otherPoints_input"></input>
+		<p></p>
+		<button id=calculate onclick="addAllTheNumbers()">Calculate</button>
+		<section id="result_display"></section>
+	</section>
+
+</body>
+</html>
